@@ -23,7 +23,7 @@ def scrape(subreddit_name: str) -> List[dict]:
     page_start: int = 0
     next_cursor: str = None
     results: List = []
-    while page_start < 2:
+    while page_start < 10:
         page_start += 1
         if next_cursor:
             url = base_url + f"&after={next_cursor}"

@@ -3,13 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>{{ subreddit }} Data</title>
+    <style>
+        .center-div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+    </style>
 </head>
 <body>
-    <h1>Data for r/{{ subreddit }}</h1>
-    {% for post in data %}
-        <li><h3>{{ post.title }}</h3></li>
-        <img src="{{ post.thumbnail }}"alt="Reddit Image" width="500" height="500">
-    {% endfor %}
-    <a href="{{ url_for('index') }}">Back to list</a>
+    <div class="center-div">
+        <h1>Data for r/{{ subreddit }}</h1>
+        {% for post in data %}
+            <h3>{{ post.title }}</h3>
+            <img src="{{ post.thumbnail }}"alt="Reddit Image" width="500" height="auto">
+            <hr>
+        {% endfor %}
+        <a href="{{ url_for('index') }}">Back to list</a>
+    </div>
+    
 </body>
 </html>
