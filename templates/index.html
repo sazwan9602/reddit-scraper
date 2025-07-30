@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subreddit Scraper</title>
+</head>
+<body>
+    <h2>Subreddit List</h2>
+        <ul>
+        {% for subreddit in listing %}
+            <li>
+                <a href="{{ url_for('listing_redirect', subreddit=subreddit) }}">{{ subreddit }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+</body>
+</html>
