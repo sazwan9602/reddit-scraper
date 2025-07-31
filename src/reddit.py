@@ -9,7 +9,7 @@ FINAL_PATH = "src/final/{}.json"
 
 
 def run(subreddit_name: str) -> None:
-    raw_data: List[dict] = scrape(subreddit_name)
+    raw_data = scrape(subreddit_name)
     fn.write_json(RAW_PATH.format(subreddit_name), raw_data)
 
     processed_data = preprocess_data(raw_data)

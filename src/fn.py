@@ -19,7 +19,7 @@ def read_directory(dir: str) -> list:
     return os.listdir(Path(dir))
 
 
-def read_json_file(filename):
+def read_json_file(filename: str) -> Any:
     try:
         with open(filename, "r") as file:
             data = json.load(file)

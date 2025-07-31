@@ -38,6 +38,11 @@ Run the scraper and enter the subreddit name when prompted:
 python scrape.py
 ```
 
+## Data Files
+
+- **Raw data** is saved in: `src/raw/<subredditname>.json`
+- **Final data** is saved in: `src/final/<subredditname>.json`
+
 ### View the Data
 
 Start the web server:
@@ -45,3 +50,5 @@ Start the web server:
 python main.py
 ```
 Open your browser and go to: [http://127.0.0.1:5000/]
+
+
